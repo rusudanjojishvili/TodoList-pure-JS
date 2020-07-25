@@ -1,0 +1,198 @@
+body{
+    box-sizing: border-box;
+    background: url(tile.jpg);
+}
+body h1:first-of-type{
+    margin: 30px auto;
+    width: 30%;
+    text-align: center;
+    color: rgb(12, 12, 104);
+    /* font-family: 'Bebas Neue', cursive; */
+}
+#notebook{
+    margin: 0 auto;
+    background: url(formbg.jpg);
+    /* background-size: contain; */
+    width: 40%;
+    padding: 10px;
+    /* border-radius: 4px; */
+}
+#container{
+    /* background-color: #fff; */
+    margin: 50px auto;
+    /*  height - temporary */
+    height: 300px; 
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* justify-content: flex-start; */
+}
+#notebook input,button{
+    display: block;
+    margin: 15px auto;
+    width: 50%;
+    /* border: none; */
+    border:  1px solid rgb(160, 152, 152);
+   
+    /* border-radius: 3px; */
+}
+#notebook input {
+    box-shadow: inset 0 0 5px rgb(71, 105, 197);
+    border-radius: 5px;
+    outline: none;
+    padding: 8px;
+}
+#notebook button{
+    padding: 5px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: rgb(236, 197, 149);
+    border: 1px solid rgb(240, 184, 116);
+    cursor: pointer;
+    text-transform: uppercase;
+    background: -moz-linear-gradient(top,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+    background: -webkit-linear-gradient(top,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+    background:linear-gradient(top,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+}
+#notebook button:hover{
+    background: rgb(190, 137, 71);
+    background: -moz-linear-gradient(bottom,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+    background: -webkit-linear-gradient(bottom,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+    background:linear-gradient(bottom,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
+}
+.note{
+    background: url(notebg.png) no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 270px;
+    margin: 15px;
+    position: relative;
+
+}
+.new{
+    animation: show 1s ease;
+  
+}
+.description{
+    margin: 0 5px 0 10px;
+    overflow: auto;
+    height: 140px;
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* border: 1px solid rgb(236, 197, 149); */
+}
+/* body scrollbar */
+.body::-webkit-scrollbar{
+    width: 15px;
+}
+.body::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.body::-webkit-scrollbar-thumb{
+    background:  rgb(56, 56, 158);
+    /* background:  rgb(95, 95, 243); */
+    border-radius: 10px;
+}
+
+.note ::-webkit-scrollbar{
+    width: 12px;
+}
+.note ::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.note ::-webkit-scrollbar-thumb{
+    background:rgb(214, 156, 86);
+    border-radius: 10px;
+}
+.taskTitle{
+    display: block;
+    margin: 27px auto 10px auto;
+    width: 70%;
+    text-align: center;
+    color: rgb(25, 25, 145);
+}
+.date{
+    display: block;
+    margin: 10px;
+    
+}
+.delbtn{
+    display: none;
+}
+.note:hover .delbtn{
+    display: block;
+    position: absolute; 
+    top:22px;
+    right: 8px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    color: white;
+    border-radius: 11px;
+    background-color: rgb(112, 110, 110);
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        width:0;
+    }
+    100%{
+        opacity: 1;
+        width: 180px;
+    }
+}
+@media only screen and (max-width:1200px){
+    #notebook{
+        width: 50%;
+    }
+}
+  @media only screen and (max-width:992px){
+    #notebook{
+               width: 60%;
+           }
+       }
+@media only screen and (max-width:768px){
+    #notebook input {
+        width: 70%;
+     }
+     body h1:first-of-type{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:576px){
+    #notebook{
+        width: 80%;
+    }
+    .note{
+        width: 250px;
+        height: 340px;
+    }
+    #container{
+        justify-content: center;
+    }
+    .description{
+        margin: 0 15px 0 10px;
+        height: 180px;
+    }
+    .taskTitle{
+        margin: 40px auto 15px auto;
+    }
+    .note:hover .delbtn{
+        top:30px;
+        right: 15px;
+        
+    }
+   
+   
+}
+
+
