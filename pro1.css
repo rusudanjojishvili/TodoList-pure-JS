@@ -1,26 +1,26 @@
 body{
     box-sizing: border-box;
-    background: url(tile.jpg);
+    background: url(images/tile.jpg);
 }
 body h1:first-of-type{
     margin: 30px auto;
     width: 30%;
     text-align: center;
     color: rgb(12, 12, 104);
-    /* font-family: 'Bebas Neue', cursive; */
+    
 }
 #notebook{
     margin: 0 auto;
-    background: url(formbg.jpg);
-    /* background-size: contain; */
+    background: url(images/formbg.jpg);
+    
     width: 40%;
     padding: 10px;
-    /* border-radius: 4px; */
+   
 }
 #container{
-    /* background-color: #fff; */
+   
     margin: 50px auto;
-    /*  height - temporary */
+    
     height: 300px; 
     width: 90%;
     display: flex;
@@ -32,10 +32,10 @@ body h1:first-of-type{
     display: block;
     margin: 15px auto;
     width: 50%;
-    /* border: none; */
+   
     border:  1px solid rgb(160, 152, 152);
    
-    /* border-radius: 3px; */
+   
 }
 #notebook input {
     box-shadow: inset 0 0 5px rgb(71, 105, 197);
@@ -64,7 +64,7 @@ body h1:first-of-type{
     background:linear-gradient(bottom,rgb(236, 197, 149) 0%,rgb(190, 137, 71) 100%);
 }
 .note{
-    background: url(notebg.png) no-repeat;
+    background: url(images/notebg.png) no-repeat;
     background-size: cover;
     width: 180px;
     height: 270px;
